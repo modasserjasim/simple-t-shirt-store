@@ -11,6 +11,9 @@ const Cart = ({ cart, handleRemoveItem }) => {
         <div>
             <h3>Order Summary</h3>
             {
+                cart.length > 0 && <p>Review your order</p>
+            }
+            {
                 cart.map(tshirt =>
 
                     <p key={tshirt._id}>{tshirt.name}
@@ -22,3 +25,5 @@ const Cart = ({ cart, handleRemoveItem }) => {
 };
 
 export default Cart;
+
+// Conditional rendering 
